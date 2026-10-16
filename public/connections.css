@@ -1,0 +1,13 @@
+/* Connection points account dashboard */
+.conn-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:22px}
+.conn-list .panel{box-shadow:0 16px 40px #07152242;border-color:#d0dfe7}
+.conn-list .panel h3{margin:20px 0 10px;font:800 21px Manrope,sans-serif;letter-spacing:-.04em}
+.conn-list .panel p{white-space:pre-wrap;min-height:43px;line-height:1.7}
+.conn-list .btn.outline{color:#293a44;border-color:#b2c6d2;margin-top:15px}
+.conn-list .plan-chip{font-weight:800;display:inline-block;border-radius:50px;background:#deede6;color:#3e8166;padding:8px 13px;font-size:10px;letter-spacing:.08em}
+.conn-plan{background:linear-gradient(125deg,#395566,#2b414f)!important;color:#eff7fa!important;border-color:#6c8b9a!important;box-shadow:0 20px 48px #07152235}
+.conn-plan h3{font:800 clamp(24px,3vw,32px) Manrope,sans-serif;letter-spacing:-.05em;color:#eff7fa!important}
+.conn-plan p{color:#cce0e9!important;line-height:1.8;max-width:680px}
+.conn-plan .btn.coral{margin-top:15px}
+.conn-plan .smallnote{color:#c8d9e3!important}
+@media(max-width:740px){.conn-list{grid-template-columns:1fr}.conn-plan{padding:24px}}
