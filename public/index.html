@@ -98,6 +98,27 @@ body{background:#19242e;color:#e8eef2}
 #legalView .readable a{color:#e3aba7}
 @media(max-width:1180px){.navlinks{background:#243440;border:1px solid #405564;border-top:0;box-shadow:0 24px 42px #07121a80}.navlinks a,.navlinks button{color:#e2edf2}}
 @media(max-width:740px){.navlinks{background:#243440}.hero{background:#222e39}.listing{box-shadow:0 12px 32px #0a172131}}
+
+/* Keep the mission card visually separate from both service example cards. */
+.hero-canvas{height:635px}
+.hero-canvas>.trade-guidance{top:4px}
+.hero-canvas>.float-card.a{top:230px}
+.hero-canvas>.float-card.b{bottom:10px}
+.hero-canvas>.match-pill{top:63%}
+@media (min-width:741px) and (max-width:950px){
+  .hero-canvas{height:655px}
+  .hero-canvas>.trade-guidance{top:4px}
+  .hero-canvas>.float-card.a{top:245px}
+  .hero-canvas>.float-card.b{bottom:4px}
+  .hero-canvas>.match-pill{top:63%}
+}
+@media (max-width:740px){
+  .hero-canvas{height:480px}
+  .hero-canvas>.trade-guidance{top:3px}
+  .hero-canvas>.float-card.a{top:180px}
+  .hero-canvas>.float-card.b{bottom:2px}
+  .hero-canvas>.match-pill{top:59%}
+}
 </style></head>
 <body>
 <header class="top"><div class="wrap nav"><a href="#" class="brand" data-nav="home"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 1 14.8 9.2 23 12 14.8 14.8 12 23 9.2 14.8 1 12 9.2 9.2Z"/><circle cx="12" cy="12" r="2.1" fill="currentColor"/></svg></span><span>NORTH STAR<small>CONNECTIONS</small></span></a><nav class="navlinks" id="navlinks"><a href="#browse" data-nav="home">Explore services</a><a href="#how" data-nav="home">How it works</a><a href="#demo" data-nav="home">The exchange</a><button id="dashboardLink" class="hide" data-view="dashboard">My dashboard</button><button id="adminLink" class="hide" data-view="admin">Admin</button></nav><div class="actions"><button class="btn outline sm loginbtn" id="loginBtn">Log in</button><button class="btn dark sm" id="joinBtn">Join the exchange →</button><button class="mobilemenu" id="menuBtn" aria-label="Toggle menu">☰</button></div></div></header>
