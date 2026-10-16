@@ -1,0 +1,1 @@
+// Connection point management extension
