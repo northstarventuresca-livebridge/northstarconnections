@@ -35,6 +35,69 @@
 .lightbox-info{position:absolute;left:70px;right:70px;bottom:14px;text-align:center;color:#c7d0d5;font-size:12px;display:flex;gap:12px;justify-content:center;align-items:center}
 .lightbox-info span{color:#97adb8;font-weight:800;white-space:nowrap}
 @media(max-width:740px){.trade-guidance .wrap{justify-content:flex-start;flex-wrap:nowrap;align-items:flex-start;gap:10px;padding:14px 0}.trade-guidance strong{display:block;white-space:normal;margin:0 0 3px}.trade-guidance p{font-size:11px}.swap-icon{margin-top:2px}.image-lightbox{padding:65px 8px 70px}.lightbox-close{top:13px;right:13px}.lightbox-arrow{width:39px;height:39px;background:#25333bc4}.lightbox-arrow.prev{left:8px}.lightbox-arrow.next{right:8px}.lightbox-info{left:16px;right:16px;bottom:20px;font-size:11px;flex-direction:column;gap:4px}}
+
+/* Dark slate refresh: remove the warm beige canvas, retain crisp light service cards. */
+:root{--paper:#19242e;--line:#3e4b55;--shadow:0 20px 65px rgba(5,12,19,.24)}
+body{background:#19242e;color:#e8eef2}
+.top{background:rgba(25,34,43,.97);border-bottom:1px solid #394753}
+.top .brand{color:#f4f7f8}
+.top .brand small{color:#db9d98}
+.top .mark{background:#34424c}
+.navlinks{color:#cbd8e0}
+.navlinks a:hover,.navlinks button:hover{color:#f1a69e}
+.mobilemenu{color:#e8f0f3}
+.top .btn.outline{color:#edf3f5;border-color:#697c88}
+.top .btn.outline:hover{background:#364653}
+.top .btn.dark{background:#b8d2e1;color:#21313c}
+.top .btn.dark:hover{background:#d0e2ed}
+.stripe{background:#263743;border-bottom:1px solid #3c4e5c;color:#e0ebf0}
+.stripe strong{color:#edf4f6}
+.stripe p{color:#b5c6cf}
+.ticker{color:#d1e0e6}
+.tick{background:#304451;border-color:#536c7a;color:#e1eaf0}
+.tick b{color:#efa9a1}
+#browse{background:radial-gradient(ellipse at 89% 12%,rgba(89,126,149,.16),transparent 52%),linear-gradient(160deg,#1d2934,#202b35 62%,#1b2630)}
+.section-head h2{color:#f3f6f7}
+.section-head p{color:#b5c6cf}
+.section-head .btn.outline,.app-head .btn.outline{color:#eaf3f6;border-color:#708795}
+.section-head .btn.outline:hover,.app-head .btn.outline:hover{background:#304450}
+.search{background:#f7fafb;color:#33454e;border-color:#b6c8d0}
+.search input{color:#25343c}
+.search input::placeholder{color:#768992}
+.chip{background:#2c3c48;border-color:#455a68;color:#d9e5ec}
+.chip.active,.chip:hover{background:#b7d2e2;border-color:#b7d2e2;color:#20323d}
+.listing{background:#fbfcfd;border-color:#d5dfe4;box-shadow:0 10px 32px rgba(2,12,21,.12);color:#20272d}
+.listing:hover{border-color:#c7dce8;box-shadow:0 24px 58px rgba(3,11,20,.26)}
+.no-data{background:#f9fbfc;color:#25313a;border-color:#a4bac7}
+.no-data p{color:#687b85}
+#exampleTitle{color:#acbec8!important}
+.bridge{background:linear-gradient(160deg,#1a2630,#233541);color:#eef4f6}
+.demo-shell{background:#253440;border:1px solid #425767;box-shadow:0 24px 70px #09131d60}
+.demo-left{background:radial-gradient(circle at 12% 75%,#3d5966,#25313d 67%)}
+.demo-right{background:#263440}
+.step{border-top-color:#506373}
+.step h3{color:#f0f5f8}
+.step p{color:#b5c8d2}
+.step .steps-icon{background:#304452;color:#c1dce9;border:1px solid #415c6d}
+.pitch{background:linear-gradient(115deg,#365365,#29404f);color:#eef4f8}
+.pitch .eyebrow{color:#f0b5ac!important}
+.pitch p{color:#c5d8e2}
+.pitch .btn.dark{background:#b9d4e3;color:#20333f}
+.foot{background:#121b24;border-top:1px solid #334552}
+.app-section{background:linear-gradient(160deg,#1b2833,#233240);color:#edf4f6}
+.app-head h1{color:#f0f5f7}
+.app-head p{color:#b6c8d2}
+.tabs{background:#293d4c;border:1px solid #465e6e}
+.tabs button{color:#b9ccd5}
+.tabs button.selected{color:#1f2d37;background:#d1e3eb}
+.panel,.metric,.dialog,.message{color:#20272d}
+.panel{border-color:#d2dfe4;background:#fbfcfd}
+.metric{border-color:#d2dfe4;background:#fbfcfd}
+#legalView .readable h2{color:#f1f5f8}
+#legalView .readable p{color:#c2d2da}
+#legalView .readable a{color:#e3aba7}
+@media(max-width:1180px){.navlinks{background:#243440;border:1px solid #405564;border-top:0;box-shadow:0 24px 42px #07121a80}.navlinks a,.navlinks button{color:#e2edf2}}
+@media(max-width:740px){.navlinks{background:#243440}.hero{background:#222e39}.listing{box-shadow:0 12px 32px #0a172131}}
 </style></head>
 <body>
 <header class="top"><div class="wrap nav"><a href="#" class="brand" data-nav="home"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 1 14.8 9.2 23 12 14.8 14.8 12 23 9.2 14.8 1 12 9.2 9.2Z"/><circle cx="12" cy="12" r="2.1" fill="currentColor"/></svg></span><span>NORTH STAR<small>CONNECTIONS</small></span></a><nav class="navlinks" id="navlinks"><a href="#browse" data-nav="home">Explore services</a><a href="#how" data-nav="home">How it works</a><a href="#demo" data-nav="home">The exchange</a><button id="dashboardLink" class="hide" data-view="dashboard">My dashboard</button><button id="adminLink" class="hide" data-view="admin">Admin</button></nav><div class="actions"><button class="btn outline sm loginbtn" id="loginBtn">Log in</button><button class="btn dark sm" id="joinBtn">Join the exchange →</button><button class="mobilemenu" id="menuBtn" aria-label="Toggle menu">☰</button></div></div></header>
