@@ -5,7 +5,7 @@ const id=()=>crypto.randomUUID();
 const hex=a=>Array.from(a).map(x=>x.toString(16).padStart(2,"0")).join("");
 const bytes=s=>Uint8Array.from((s||"").match(/.{1,2}/g)||[],c=>parseInt(c,16));
 const hash=async s=>hex(new Uint8Array(await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s))));
-async function passHash(p,salt){const key=await crypto.subtle.importKey("raw",new TextEncoder().encode(p),"PBKDF2",false,["deriveBits"]);return hex(new Uint8Array(await crypto.subtle.deriveBits({name:"PBKDF2",salt:bytes(salt),iterations:180000,hash:"SHA-256"},key,256)));}
+async function passHash(p,salt){const key=await crypto.subtle.importKey("raw",new TextEncoder().encode(p),"PBKDF2",false,["deriveBits"]);return hex(new Uint8Array(await crypto.subtle.deriveBits({name:"PBKDF2",salt:bytes(salt),iterations:100000,hash:"SHA-256"},key,256)));}
 const clean=(s,n=200)=>String(s??"").trim().slice(0,n).replace(/[<>]/g,"");
 const https=s=>{try{const u=new URL(s);return u.protocol==="https:"?u.toString().slice(0,500):"";}catch{return "";}}
 const input=async r=>{if(Number(r.headers.get("content-length"))>45000)throw Error("Submission is too large.");const s=await r.text();if(s.length>45000)throw Error("Submission is too large.");return JSON.parse(s||"{}");};
