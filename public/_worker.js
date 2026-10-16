@@ -139,7 +139,7 @@ if(m==="POST"&&p==="/api/billing/checkout"){
  if(plan.active)return err("Your Unlimited membership is already active.");
  if(!e.STRIPE_SECRET_KEY||!e.STRIPE_WEBHOOK_SECRET)return err("Online membership checkout is being configured. Contact support@northstarventures.ca for early access.",503);
  await limit(e,"checkout:"+user.id,12);
- const values={"mode":"subscription","client_reference_id":user.id,"metadata[user_id]":user.id,"subscription_data[metadata][user_id]":user.id,"line_items[0][price_data][currency]":"cad","line_items[0][price_data][unit_amount]":"2000","line_items[0][price_data][recurring][interval]":"year","line_items[0][price_data][product_data][name]":"North Star Connections · Unlimited Connections","line_items[0][quantity]":"1","success_url":u.origin+"/?membership=success","cancel_url":u.origin+"/?membership=cancel"};
+ const values={"mode":"subscription","client_reference_id":user.id,"metadata[user_id]":user.id,"subscription_data[metadata][user_id]":user.id,"line_items[0][price]":e.STRIPE_UNLIMITED_PRICE_ID||"price_1URIjWFCz4V2Eq00lhkyDON1","line_items[0][quantity]":"1","success_url":u.origin+"/?membership=success","cancel_url":u.origin+"/?membership=cancel"};
  if(plan.customer)values.customer=plan.customer;else values.customer_email=user.email;
  const checkout=await stripeRequest(e,"checkout/sessions",values);
  const checkoutUrl=new URL(checkout.url||"");
